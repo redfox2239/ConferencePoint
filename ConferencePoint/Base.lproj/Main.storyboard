@@ -1,25 +1,246 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Gd-jV-rc3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConferencePoint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="人数を決めてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMG-l1-Eqt">
+                                <rect key="frame" x="75" y="96" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xn-6L-Ff2">
+                                <rect key="frame" x="20" y="152" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="会議の" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC7-hv-jaD">
+                                <rect key="frame" x="135" y="67" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frN-qE-Bq7">
+                                <rect key="frame" x="120" y="205" width="81" height="30"/>
+                                <color key="backgroundColor" red="0.71645581749999998" green="0.84537933119999997" blue="0.88737980770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="81s-qH-Yt5"/>
+                                    <constraint firstAttribute="width" constant="81" id="jgz-Pt-VCy"/>
+                                </constraints>
+                                <state key="normal" title="決定">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapInputButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lpq-2n-BYp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1053624787" green="0.47976015090000002" blue="0.71291242460000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6xn-6L-Ff2" firstAttribute="top" secondItem="kMG-l1-Eqt" secondAttribute="bottom" constant="35" id="0eF-Z3-Y5N"/>
+                            <constraint firstItem="frN-qE-Bq7" firstAttribute="top" secondItem="6xn-6L-Ff2" secondAttribute="bottom" constant="23" id="2ut-QC-Q28"/>
+                            <constraint firstItem="6xn-6L-Ff2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="5FX-dc-7bE"/>
+                            <constraint firstAttribute="trailing" secondItem="6xn-6L-Ff2" secondAttribute="trailing" constant="20" id="E6f-E6-sfn"/>
+                            <constraint firstItem="6xn-6L-Ff2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FrT-pM-PiQ"/>
+                            <constraint firstItem="kMG-l1-Eqt" firstAttribute="top" secondItem="xC7-hv-jaD" secondAttribute="bottom" constant="8" id="WB0-79-Uj3"/>
+                            <constraint firstItem="xC7-hv-jaD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="Yc2-q1-gmX"/>
+                            <constraint firstItem="frN-qE-Bq7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hhU-yj-etg"/>
+                            <constraint firstItem="xC7-hv-jaD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jeT-IE-hLj"/>
+                            <constraint firstItem="kMG-l1-Eqt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="paI-qc-mMk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aXW-cx-qhL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="numberOfPeopleTextField" destination="6xn-6L-Ff2" id="wpX-jd-Uk7"/>
+                        <segue destination="ZaF-Fm-fiu" kind="show" id="5Ha-Fd-9Q7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="187" y="334"/>
+        </scene>
+        <!--Input Member View Controller-->
+        <scene sceneID="fSf-UF-SEY">
+            <objects>
+                <viewController storyboardIdentifier="メンバー入力画面" id="ZaF-Fm-fiu" customClass="InputMemberViewController" customModule="ConferencePoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cDX-Hu-LdH"/>
+                        <viewControllerLayoutGuide type="bottom" id="fP2-ht-Sf2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="adf-xJ-Jvz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zTk-Ju-buu">
+                                <rect key="frame" x="20" y="101" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZaF-Fm-fiu" id="xEv-SZ-4uv"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8人の名前を入れてね" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-B5-CjL">
+                                <rect key="frame" x="78" y="72" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Or-u6-fIN">
+                                <rect key="frame" x="0.0" y="139" width="320" height="429"/>
+                                <color key="backgroundColor" red="0.90218063770000001" green="0.92777331429999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="IQr-H2-AAT">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IQr-H2-AAT" id="C59-mk-duF">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.90218063771058066" green="0.92777331426527065" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZaF-Fm-fiu" id="caB-6C-lBW"/>
+                                    <outlet property="delegate" destination="ZaF-Fm-fiu" id="yqd-Um-Zk5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1053624787" green="0.47976015090000002" blue="0.71291242460000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Or-u6-fIN" firstAttribute="top" secondItem="zTk-Ju-buu" secondAttribute="bottom" constant="8" id="79R-14-NgL"/>
+                            <constraint firstItem="0Or-u6-fIN" firstAttribute="leading" secondItem="adf-xJ-Jvz" secondAttribute="leading" id="OFG-yR-XqZ"/>
+                            <constraint firstItem="fP2-ht-Sf2" firstAttribute="top" secondItem="0Or-u6-fIN" secondAttribute="bottom" id="Qa7-1t-6tA"/>
+                            <constraint firstAttribute="trailing" secondItem="0Or-u6-fIN" secondAttribute="trailing" id="UMo-RL-MZm"/>
+                            <constraint firstItem="zTk-Ju-buu" firstAttribute="top" secondItem="5LX-B5-CjL" secondAttribute="bottom" constant="8" id="YI6-z2-HAB"/>
+                            <constraint firstItem="5LX-B5-CjL" firstAttribute="top" secondItem="cDX-Hu-LdH" secondAttribute="bottom" constant="8" id="iiv-op-K0F"/>
+                            <constraint firstItem="5LX-B5-CjL" firstAttribute="centerX" secondItem="adf-xJ-Jvz" secondAttribute="centerX" id="oza-In-wNH"/>
+                            <constraint firstAttribute="trailing" secondItem="zTk-Ju-buu" secondAttribute="trailing" constant="20" id="uaH-66-O7a"/>
+                            <constraint firstItem="zTk-Ju-buu" firstAttribute="leading" secondItem="adf-xJ-Jvz" secondAttribute="leading" constant="20" id="y57-fH-2JJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PmI-Aw-xdr">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="完了" id="cgS-JH-VxC">
+                            <connections>
+                                <action selector="tapCompeleteButton:" destination="ZaF-Fm-fiu" id="D3q-L0-WZR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="completeButton" destination="cgS-JH-VxC" id="S7g-5W-OCE"/>
+                        <outlet property="marginBottomMemberRableView" destination="Qa7-1t-6tA" id="Wnv-WM-LgG"/>
+                        <outlet property="memberTableView" destination="0Or-u6-fIN" id="5pC-Eg-Qmy"/>
+                        <outlet property="memberTextField" destination="zTk-Ju-buu" id="Ozp-12-Onr"/>
+                        <outlet property="numberOfPeopleLabel" destination="5LX-B5-CjL" id="e3j-bG-Gay"/>
+                        <segue destination="7zs-y7-oqn" kind="show" id="nke-IZ-UWL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLA-uc-Sfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="334"/>
+        </scene>
+        <!--Seating Arrangement View Controller-->
+        <scene sceneID="BEa-xT-KeI">
+            <objects>
+                <viewController storyboardIdentifier="席順画面" id="7zs-y7-oqn" customClass="SeatingArrangementViewController" customModule="ConferencePoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wOk-SV-eHU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Prg-6F-lRr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vOy-ky-wJv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="席順を決めてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siw-ds-jr7">
+                                <rect key="frame" x="75" y="72" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1053624787" green="0.47976015090000002" blue="0.71291242460000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="siw-ds-jr7" firstAttribute="centerX" secondItem="vOy-ky-wJv" secondAttribute="centerX" id="2NM-gY-ENJ"/>
+                            <constraint firstItem="siw-ds-jr7" firstAttribute="top" secondItem="wOk-SV-eHU" secondAttribute="bottom" constant="8" id="nB2-Kw-GpJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="egM-sW-XF8">
+                        <barButtonItem key="rightBarButtonItem" title="会議スタート" id="4h6-mM-w2u">
+                            <connections>
+                                <action selector="tapStartMeetingButton:" destination="7zs-y7-oqn" id="XcZ-n7-Oxf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoLabel" destination="siw-ds-jr7" id="Poi-FU-NmY"/>
+                        <segue destination="yjy-AY-bLe" kind="show" id="5w6-wt-GWC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JsW-dE-qC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127" y="334"/>
+        </scene>
+        <!--Meeting View Controller-->
+        <scene sceneID="FHP-LA-0D8">
+            <objects>
+                <viewController storyboardIdentifier="会議画面" id="yjy-AY-bLe" customClass="MeetingViewController" customModule="ConferencePoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LrB-DG-MCy"/>
+                        <viewControllerLayoutGuide type="bottom" id="mAr-Ue-oly"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QbV-sQ-lhW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1053624787" green="0.47976015090000002" blue="0.71291242460000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A4x-aW-cvn">
+                        <barButtonItem key="rightBarButtonItem" title="会議終了" id="Mj0-4C-wXw">
+                            <connections>
+                                <action selector="tapEndMeetingButton:" destination="yjy-AY-bLe" id="nHd-0i-o17"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="endMeetingButton" destination="Mj0-4C-wXw" id="EC0-Ai-5dl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="250-nS-1o1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="334"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JRn-uc-9Nq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Gd-jV-rc3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gbp-Jh-uTe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1053624787" green="0.47976015090000002" blue="0.71291242460000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xKd-uj-ZQG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEo-VS-5gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-305" y="334"/>
         </scene>
     </scenes>
 </document>

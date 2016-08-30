@@ -14,6 +14,11 @@
 		7F4697251D74670400C0B7E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4697231D74670400C0B7E9 /* LaunchScreen.storyboard */; };
 		7F4697301D74670500C0B7E9 /* ConferencePointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F46972F1D74670500C0B7E9 /* ConferencePointTests.swift */; };
 		7F46973B1D74670500C0B7E9 /* ConferencePointUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F46973A1D74670500C0B7E9 /* ConferencePointUITests.swift */; };
+		7F4697491D746AC000C0B7E9 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4697481D746AC000C0B7E9 /* MeetingViewController.swift */; };
+		7F46974B1D7478D400C0B7E9 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F46974A1D7478D400C0B7E9 /* PersonView.swift */; };
+		7F46974D1D7478E900C0B7E9 /* PersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F46974C1D7478E900C0B7E9 /* PersonView.xib */; };
+		7F46974F1D7479E100C0B7E9 /* InputMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F46974E1D7479E100C0B7E9 /* InputMemberViewController.swift */; };
+		7F4697511D74902F00C0B7E9 /* SeatingArrangementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4697501D74902F00C0B7E9 /* SeatingArrangementViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		7F4697361D74670500C0B7E9 /* ConferencePointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConferencePointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F46973A1D74670500C0B7E9 /* ConferencePointUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencePointUITests.swift; sourceTree = "<group>"; };
 		7F46973C1D74670500C0B7E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F4697481D746AC000C0B7E9 /* MeetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
+		7F46974A1D7478D400C0B7E9 /* PersonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		7F46974C1D7478E900C0B7E9 /* PersonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonView.xib; sourceTree = "<group>"; };
+		7F46974E1D7479E100C0B7E9 /* InputMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputMemberViewController.swift; sourceTree = "<group>"; };
+		7F4697501D74902F00C0B7E9 /* SeatingArrangementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatingArrangementViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,11 @@
 				7F4697211D74670400C0B7E9 /* Assets.xcassets */,
 				7F4697231D74670400C0B7E9 /* LaunchScreen.storyboard */,
 				7F4697261D74670400C0B7E9 /* Info.plist */,
+				7F4697481D746AC000C0B7E9 /* MeetingViewController.swift */,
+				7F46974A1D7478D400C0B7E9 /* PersonView.swift */,
+				7F46974C1D7478E900C0B7E9 /* PersonView.xib */,
+				7F46974E1D7479E100C0B7E9 /* InputMemberViewController.swift */,
+				7F4697501D74902F00C0B7E9 /* SeatingArrangementViewController.swift */,
 			);
 			path = ConferencePoint;
 			sourceTree = "<group>";
@@ -229,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F46974D1D7478E900C0B7E9 /* PersonView.xib in Resources */,
 				7F4697251D74670400C0B7E9 /* LaunchScreen.storyboard in Resources */,
 				7F4697221D74670400C0B7E9 /* Assets.xcassets in Resources */,
 				7F4697201D74670400C0B7E9 /* Main.storyboard in Resources */,
@@ -256,6 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4697491D746AC000C0B7E9 /* MeetingViewController.swift in Sources */,
+				7F46974B1D7478D400C0B7E9 /* PersonView.swift in Sources */,
+				7F46974F1D7479E100C0B7E9 /* InputMemberViewController.swift in Sources */,
+				7F4697511D74902F00C0B7E9 /* SeatingArrangementViewController.swift in Sources */,
 				7F46971D1D74670400C0B7E9 /* ViewController.swift in Sources */,
 				7F46971B1D74670400C0B7E9 /* AppDelegate.swift in Sources */,
 			);
@@ -482,6 +502,7 @@
 				7F4697411D74670500C0B7E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F4697421D74670500C0B7E9 /* Build configuration list for PBXNativeTarget "ConferencePointTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +511,7 @@
 				7F4697441D74670500C0B7E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F4697451D74670500C0B7E9 /* Build configuration list for PBXNativeTarget "ConferencePointUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +520,7 @@
 				7F4697471D74670500C0B7E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
